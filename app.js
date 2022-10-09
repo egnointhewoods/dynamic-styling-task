@@ -3,7 +3,7 @@ const app = Vue.createApp({
     return {
       paragraphClass: "",
       backgroundColor: "",
-      visibility: true,
+      isHidden: false,
     };
   },
   methods: {
@@ -14,12 +14,8 @@ const app = Vue.createApp({
       this.backgroundColor = event.target.value;
     },
     toggleParagraph() {
-      if (this.visibility) {
-        this.paragraphClass = `${this.paragraphClass} hidden`;
-      } else {
-        this.paragraphClass = `${this.paragraphClass} visible`;
-      }
-      this.visibility = !this.visibility;
+      this.isHidden = !this.isHidden;
+      console.log(this.isHidden);
     },
   },
 });
