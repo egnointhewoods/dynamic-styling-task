@@ -21,7 +21,7 @@
       <!-- The entered class should be added to the below paragraph -->
       <input @keyup="setClass" type="text" />
       <!-- (available classes: "user1", "user2") -->
-      <p :class="paragraphClass">Style me!</p>
+      <p :class="[paragraphClass, {hidden: isHidden}]">Style me!</p>
       <button @click="toggleParagraph">Toggle Paragraph</button>
       <!-- 2) Use the "visible" and "hidden" classes to show/ hide the above paragraph -->
       <!-- Clicking the button should toggle between the two options -->
